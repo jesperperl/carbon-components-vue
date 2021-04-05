@@ -1,9 +1,11 @@
 export const storySourceCode = (
   templateSource,
   args,
-  replacing = 'v-bind="$props"'
+  replacing = 'v-bind="args"'
 ) => {
   const propToSource = (key, val) => {
+    if (key.startsWith('slotArgs.')) return '';
+
     const type = typeof val;
     switch (type) {
       case 'boolean':
@@ -29,7 +31,7 @@ export const storyParametersObject = (
   parameters,
   templateSource,
   args,
-  replacing = 'v-bind="$props"'
+  replacing = 'v-bind="args"'
 ) => {
   const code = storySourceCode(templateSource, args, replacing);
 

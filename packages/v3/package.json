@@ -17,11 +17,11 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "@carbon/icons-vue": "^10.25.0",
+    "@carbon/icons-vue": "10.27.0",
     "@carbon/layout": "^10.17.0",
     "@carbon/themes": "^10.26.0",
     "@carbon/type": "^10.20.0",
-    "carbon-components": "^10.28.0",
+    "carbon-components": "10.30.0",
     "core-js": "^3.6.5",
     "flatpickr": "^4.6.9",
     "stylelint-config-property-sort-order-smacss": "^7.0.0",
@@ -29,15 +29,15 @@
     "vue": "^3.0.0"
   },
   "peerDependencies": {
-    "carbon-components": "^10.28.0",
+    "carbon-components": "10.30.0",
     "carbon-icons": "^7.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
-    "@storybook/addon-actions": "^6.2.0-alpha.24",
-    "@storybook/addon-essentials": "^6.2.0-alpha.24",
-    "@storybook/addon-links": "^6.2.0-alpha.24",
-    "@storybook/vue3": "^6.2.0-alpha.24",
+    "@storybook/addon-actions": "6.2.2",
+    "@storybook/addon-essentials": "6.2.2",
+    "@storybook/addon-links": "6.2.2",
+    "@storybook/vue3": "6.2.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
@@ -55,7 +55,7 @@
     "postcss-loader": "^5.0.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
-    "storybook": "^6.2.0-alpha.29",
+    "storybook": "^6.2.2",
     "typescript": "~3.9.3",
     "vue-jest": "^5.0.0-0",
     "vue-loader": "^16.0.0"
@@ -105,7 +105,10 @@
     "preset": "@vue/cli-plugin-unit-jest",
     "transform": {
       "^.+\\.vue$": "vue-jest"
-    }
+    },
+    "transformIgnorePatterns": [
+      "/node_modules/(?!@carbon)"
+    ]
   },
   "resolutions": {
     "vue": "^3.0.0",

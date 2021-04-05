@@ -1,14 +1,18 @@
 import { CvButtonSet, CvButton } from './';
 
-import { storyParametersObject } from '../../global/storybook-utils';
+import {
+  sbCompPrefix,
+  storyParametersObject,
+} from '../../global/storybook-utils';
+import { sbBtnPrefix } from './sbBtnPrefix';
 
 export default {
-  title: 'Components/CvButtonSet',
+  title: `${sbCompPrefix}/${sbBtnPrefix}/CvButtonSet`,
   component: CvButtonSet,
 };
 
 const template = `
-<cv-button-set v-bind="$props">
+<cv-button-set v-bind="args">
   <cv-button>One</cv-button>
   <cv-button kind="secondary">Two</cv-button>
   <cv-button kind="danger">Three</cv-button>
